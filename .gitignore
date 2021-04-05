@@ -21,4 +21,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-microservice-discovery-eureka/target/
+
+# java 的生成文件
+target/
+# java插件的配置文件
+.settings/ 
+# vscode的配置文件
+.vscode/
+.project
+.classpath  
+.factorypath
