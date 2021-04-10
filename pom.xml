@@ -23,6 +23,7 @@
     
     <modules>
         <module>microservice-discovery-eureka</module>
+        <module>microservice-b-user</module>
         <!-- 
         <module>microservice-provider-user</module>
         <module>microservice-consumer-movie-ribbon</module>
@@ -54,6 +55,12 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
