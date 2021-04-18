@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class UserController {
+@RestController //indicate this is a controller
+@RequestMapping("/user")
+public class UserController{
 
     @Autowired
     private Registration registration; // 服务注册
@@ -22,7 +23,7 @@ public class UserController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @RequestMapping(value = "findById", method= RequestMethod.GET )
+    @RequestMapping(value = "/findById", method= RequestMethod.GET )
     public User findById(Long id){
         User findOne = new User("Wanghan", id);
         return findOne;

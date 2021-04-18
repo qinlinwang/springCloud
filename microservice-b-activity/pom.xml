@@ -9,11 +9,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>microservice-b-user</artifactId>
+	<artifactId>microservice-b-activity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>microservice-b-user</name>
-	<description>用户中心</description>
+	<name>microservice-b-activity</name>
+	<description>活动中心</description>
 
 	<properties>
 		
@@ -25,14 +25,11 @@
 		- server模块是其真正的服务所在，且server模块应该是基于api模块的
 	-->
 	<modules>
-        <module>microservice-b-user-api</module>
-        <module>microservice-b-user-server</module>
+        <module>microservice-b-activity-api</module>
+        <module>microservice-b-activity-server</module>
     </modules>
 
 	<dependencyManagement>
-        
+
     </dependencyManagement>
-
-
-
 </project>

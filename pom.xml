@@ -24,6 +24,7 @@
     <modules>
         <module>microservice-discovery-eureka</module>
         <module>microservice-b-user</module>
+        <module>microservice-b-activity</module>
         <!-- 
         <module>microservice-provider-user</module>
         <module>microservice-consumer-movie-ribbon</module>
@@ -45,6 +46,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <microservice-b-user-api.version>0.0.1-SNAPSHOT</microservice-b-user-api.version>
+        <microservice-b-activity-api.version>0.0.1-SNAPSHOT</microservice-b-activity-api.version>
     </properties>
 
     <dependencyManagement>
@@ -61,6 +64,16 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.20</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.hange.cloud</groupId>
+                <artifactId>microservice-b-user-api</artifactId>
+                <version>${microservice-b-user-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hange.cloud</groupId>
+                <artifactId>microservice-b-activity-api</artifactId>
+                <version>${microservice-b-activity-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
