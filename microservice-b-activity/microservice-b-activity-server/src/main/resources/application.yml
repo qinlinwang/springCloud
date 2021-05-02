@@ -1,34 +1,17 @@
 
 spring:
-  profiles: user1
+  profiles: activity
   application:
-    name: microservice-b-user1
+    name: microservice-b-activity-server  # 注册在注册中心也使用这个名字，需要和feign保持一致
 server:
-  port: 8001
+  port: 9001
 
 eureka:
   instance:
-    hostname: user1 # Eureka服务端的实例名称
+    hostname: activity # Eureka服务端的实例名称
   client:
     register-with-eureka: true # false表示不向注册中心注册自己
     fetchRegistry: true  #取回注册信息
     serviceUrl:
       defaultZone: http://peer1:7001/eureka/, http://peer2:7002/eureka/, http://peer3:7003/eureka/
     
----
-
-spring:
-  profiles: user2
-  application:
-    name: microservice-b-user2
-server:
-  port: 8002
-
-eureka:
-  instance:
-    hostname: user2 # Eureka服务端的实例名称
-  client:
-    register-with-eureka: true # false表示不向注册中心注册自己
-    fetchRegistry: true  #取回注册信息
-    serviceUrl:
-      defaultZone: http://peer1:7001/eureka/, http://peer2:7002/eureka/, http://peer3:7003/eureka/

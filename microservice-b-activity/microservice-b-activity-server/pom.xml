@@ -49,12 +49,12 @@
           <groupId>org.springframework.cloud</groupId>
           <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-		<!-- 添加对api依赖 
+		<!-- 添加对api依赖 -->
 		<dependency>
           <groupId>com.hange.cloud</groupId>
           <artifactId>microservice-b-activity-api</artifactId>
         </dependency>
-		-->
+		
 		<!-- 添加对服务api的依赖 -->
 		<dependency>
           <groupId>com.hange.cloud</groupId>

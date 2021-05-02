@@ -13,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableDiscoveryClient // 服务注册到Eureka
-@EnableFeignClients //Scans for interfaces that declare they are feign clients
+@EnableFeignClients(basePackages = {"com.hange.cloud.user.feign"}) //Scans for interfaces that declare they are feign clients
 public class ActivityApplication {
     public static void main(String[] args) {
         //System.out.println("dddd");

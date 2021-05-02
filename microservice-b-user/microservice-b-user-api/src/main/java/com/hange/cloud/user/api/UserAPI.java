@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public interface UserAPI {
 
     @RequestMapping(value = "/findById", method= RequestMethod.GET )
-    public User findById(Long id);
+    public User findById(@RequestParam Long id); // 注意 这里@RequestParam是必须的，具体看这里 https://coding.imooc.com/learn/questiondetail/108882.html
 
     @GetMapping("/instance-info")
     public List<ServiceInstance> showInfo();
