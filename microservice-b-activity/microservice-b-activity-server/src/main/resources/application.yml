@@ -4,6 +4,7 @@ spring:
   application:
     name: microservice-b-activity-server  # 注册在注册中心也使用这个名字，需要和feign保持一致
 server:
+  host: 127.0.0.1 #可以不添加，默认是
   port: 9001
 
 eureka:
@@ -14,4 +15,20 @@ eureka:
     fetchRegistry: true  #取回注册信息
     serviceUrl:
       defaultZone: http://peer1:7001/eureka/, http://peer2:7002/eureka/, http://peer3:7003/eureka/
+
+feign:
+  hystrix:
+    enabled: true #开启feign的hystrix支持
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true #使用okhttp
     
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+hystrix:
+  dashboard:
+    proxyStreamAllowList: localhost, 127.0.0.1
