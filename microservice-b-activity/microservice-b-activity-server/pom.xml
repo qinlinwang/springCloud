@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.hange.cloud</groupId>
@@ -46,20 +45,38 @@
 		</dependency>
 		<!-- 添加feign的依赖 -->
 		<dependency>
-          <groupId>org.springframework.cloud</groupId>
-          <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
 		<!-- 添加对api依赖 -->
 		<dependency>
-          <groupId>com.hange.cloud</groupId>
-          <artifactId>microservice-b-activity-api</artifactId>
-        </dependency>
-		
+			<groupId>com.hange.cloud</groupId>
+			<artifactId>microservice-b-activity-api</artifactId>
+		</dependency>
+
 		<!-- 添加对服务api的依赖 -->
 		<dependency>
-          <groupId>com.hange.cloud</groupId>
-          <artifactId>microservice-b-user-api</artifactId>
-        </dependency>
+			<groupId>com.hange.cloud</groupId>
+			<artifactId>microservice-b-user-api</artifactId>
+		</dependency>
+
+		<!--添加对hystrix的依赖-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		
+		<!--添加对hystrix仪表盘的依赖-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		</dependency>
+
+		<!--添加对actuator的依赖:具体参见Chapter 5. Spring Boot Actuator: Productionready Features-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
